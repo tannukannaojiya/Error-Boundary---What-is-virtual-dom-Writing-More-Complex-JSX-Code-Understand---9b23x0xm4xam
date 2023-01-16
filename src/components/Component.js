@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Component = (props) => {
-    
-    const [error, setError] = useState(false);
+class ErrorBoundary extends React.Component {
+ 
 
-  return (
-    <>
-    {    
-        error && <div>{somethingNotDefined}</div>
+  render() {
+    if (this.state.hasError) {
+      return (
+        <p id="error">
+          
+        </p>
+      );
     }
-    </>
-  );
-};
-
-export default Component;
+    return <>{this.props.children}</>;
+  }
+}
+export default ErrorBoundary;
