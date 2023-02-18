@@ -1,17 +1,17 @@
-import React from "react";
+import React, { useState } from 'react';
 
-class ErrorBoundary extends React.Component {
- 
 
-  render() {
-    if (this.state.hasError) {
-      return (
-        <p id="error">
-          
-        </p>
-      );
-    }
-    return <>{this.props.children}</>;
+const Component = (props) => {
+  const [error, setError] = useState(false);
+  props.change(setError);
+  if(error){
+    throw new Error("My error");
   }
+  return 
+    <div>
+      {error && <div>{""}</div>}
+    </div>
+  
 }
-export default ErrorBoundary;
+
+export default Component;

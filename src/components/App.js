@@ -16,7 +16,7 @@ const App = () => {
     <div id="main">
       <h2>React Error Boundaries</h2>
       <ErrorBoundary>
-        <Component change={changeFunc} />
+        <Component change={changeFunc}/>
       </ErrorBoundary>
       <button id="gen" onClick={errorGenerator}>
         Generate Error
