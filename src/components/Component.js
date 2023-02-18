@@ -8,10 +8,10 @@ const Component = (props) => {
     throw new Error("My error");
   }
   return 
-    <div>
+    <>
       {error && <div>{""}</div>}
-    </div>
+    </>
   
-}
+};
 
 export default Component;
