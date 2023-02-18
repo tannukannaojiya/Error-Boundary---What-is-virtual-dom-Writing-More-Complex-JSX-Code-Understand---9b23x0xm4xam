@@ -1,17 +1,13 @@
-import React, { useState } from 'react';
-
+import React, { useState } from "react";
 
 const Component = (props) => {
   const [error, setError] = useState(false);
   props.change(setError);
-  if(error){
+
+  if (error) {
     throw new Error("My error");
   }
-  return 
-    <>
-      {error && <div>{""}</div>}
-    </>
-  
+  return <>{error && <div>{""}</div>}</>;
 };
 
 export default Component;

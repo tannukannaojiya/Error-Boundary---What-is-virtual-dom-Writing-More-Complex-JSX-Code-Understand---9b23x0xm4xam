@@ -3,7 +3,6 @@ import "../styles/App.css";
 import Component from "./Component";
 import ErrorBoundary from "./ErrorBoundary";
 const App = () => {
-  //write code here
   let throwErrorFunction;
   let errorGenerator = () => {
     throwErrorFunction(true);
@@ -16,7 +15,7 @@ const App = () => {
     <div id="main">
       <h2>React Error Boundaries</h2>
       <ErrorBoundary>
-        <Component change={changeFunc}/>
+        <Component change={changeFunc} />
       </ErrorBoundary>
       <button id="gen" onClick={errorGenerator}>
         Generate Error
